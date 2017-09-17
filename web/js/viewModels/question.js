@@ -42,17 +42,11 @@ define(['ojs/ojcore', 'knockout', 'jquery',
                 self.parentViewRef = info.valueAccessor().params.viewRef;
                 return new Promise(
                     function(resolve, reject) {
-                        
                         var jqxhr = $.ajax({
-                                url: "http://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json",
+                                url: "https://cdn.rawgit.com/santosh-suresh/39e58e451d724574f3cb/raw/784d83b460d6c0150e338c34713f3a1c2371e20a/assignment.json",
                                 type: "GET"
                             })
                             .done(function(data) {
-                                data=[{
-    "text": "This is the first question",
-    "options": ["answer1answer1answer1answer1answer1answer1answer1","answer2 answer1 answer1answer1answer1answer1","answer3","answer4"],
-    "answer": 2
-  }];
                                 if (data.length) {
                                     self.qnStmts(data);
                                     app.qnStmts = data;
