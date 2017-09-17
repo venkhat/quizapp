@@ -1,0 +1,23 @@
+<div id='questionView' class="question-view">
+
+    <span>Javascript Quiz <span data-bind="text:qnNo"></span> of <span data-bind="text:qnsCount"></span></span>
+    <br/>
+    <div class="qn-stmt"> <span data-bind="text:qnNo"></span>. <span data-bind="text:qnStmt().text"></span></div>
+    <ol class="options-list">
+        <!-- ko foreach: qnStmt().options-->
+        <li data-bind="text:$data"></li>
+        <!-- /ko -->
+    </ol>
+
+    <div id='buttonsContainer' class='buttons-container'>
+        <div id="answerSet" class="answer-set" data-bind="ojComponent: {component: 'ojButtonset', checked: chosenAns, 
+                                  optionChange: ansChange}" aria-label="Choose one answer">
+            <!-- ko foreach: ansOptions -->
+            <label data-bind="attr: {for: value}"></label>
+            <input type="radio" name="answers" data-bind="value: value, attr: {id: value}, 
+                              ojComponent: { component: 'ojButton', label: label }" />
+            <!-- /ko -->
+        </div>
+
+
+    </div>

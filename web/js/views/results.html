@@ -1,0 +1,16 @@
+<div class="results-view">
+
+<div data-bind="text:yourScore()" class="results-score-text"> </div>
+<table id="resultsTable" summary="Performance Report" aria-label="Performance Report"
+       data-bind="ojComponent: {component: 'ojTable', 
+                                data: datasource, 
+                                columnsDefault: {sortable: 'none'}, 
+                                columns: [{headerText: 'Chosen answer', 
+                                           field: 'chosenAns'},
+                                          {headerText: 'Solution', 
+                                           field: 'answer'},
+                                          {headerText: 'Marks', 
+                                           field: 'marks'}]}">
+</table>
+
+</div>
