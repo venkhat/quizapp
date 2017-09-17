@@ -1,0 +1,45 @@
+/*
+    Document   : override
+    Created on : <date>
+    Author     : <author>
+    Description:
+        This is where any of your application specific styles should be included
+*/
+
+.main-container{
+	padding: 20px;
+	font-size: 14px;
+}
+
+.question-view .qn-stmt{
+	margin: 10px 0 10px 0;
+
+}
+
+.question-view .options-list{
+	margin: 20px 0 20px 0;
+}
+
+.question-view .options-list li{
+	margin: 10px 0 0 0;
+}
+
+.question-view .buttons-container{
+	position: fixed;
+	bottom: 60px;
+	left:50%;
+	margin-left: -160px;
+	width: 320px;
+}
+
+.question-view .buttons-container .oj-button{
+	width: 80px;
+	height: 60px;
+	font-size: 20px;
+}
+
+
+.results-view .results-score-text{
+	margin: 20px 0;
+	font-size: 16px;
+}

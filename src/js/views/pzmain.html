@@ -1,0 +1,11 @@
+<div id="mainView" data-bind="visible: hideAll() === false" class="main-view">
+	
+    <div id="question" data-bind="visible:showQn(), ojModule: questionConfig()"></div>
+
+    <div id='result' data-bind="visible:showQn() === false, ojModule: resultsConfig()"></div>
+
+</div>
+
+<div id="noQnView" data-bind="visible:hideAll">
+	No Questions for today
+</div>
